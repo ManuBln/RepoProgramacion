@@ -1,0 +1,5 @@
+Esta tarea consiste en lo siguiente:
+
+Crear una pequeña interfaz con los distintos elementos que hemos vistos (JButton, JLabel, etc)
+La interfaz debe de ser con la idea de hacer un login posteriormente, por tanto, seria buena idea hacer un formulario de registro.
+Observar los distintos layout y usar si es posible varios, aunque esto dependerá del diseño que se quiera hacer.
