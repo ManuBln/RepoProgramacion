@@ -1,6 +1,7 @@
 
 
-class agenda:
+class Agenda:
+    
     def init(self, cliente, Agenda, TablaAgenda):
         self.cliente = cliente
         self.db = self.cliente[Agenda]
@@ -9,8 +10,8 @@ class agenda:
 
     def insertar_contacto(self, nombre, apellido, telefono, email):
         documento = {"nombre" : nombre , "apellido" : apellido , "telefono" : telefono ,"email" : email}
-        self.coleccion.insert_one(documento)
-        self.contactos.append(documento)
+        self.coleccion.insert_one(documento)#BBDD
+        self.contactos.append(documento)#ArrayList
 
     def borrar_contacto(self, nombre):
        self.coleccion.delete_one({"nombre" : nombre})
