@@ -27,13 +27,13 @@ class Agenda:
                 recorre["apellido"]=apellido
                 recorre["email"]=email
 
-    def mostrar_arrayList (self):
+    def ListarArrayList (self):
 
-        for mostrar in self.contactos:
-            print("Nombre: " + mostrar["nombre"])
-            print("Apellido: " + mostrar["apellido"])
-            print("Telefono: " + mostrar["telefono"])
-            print("Email: " + mostrar["email"])
+        for listar in self.contactos:
+            print("Nombre: " + listar["nombre"])
+            print("Apellido: " + listar["apellido"])
+            print("Telefono: " + listar["telefono"])
+            print("Email: " + listar["email"])
 
 
 

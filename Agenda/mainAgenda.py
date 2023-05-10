@@ -45,7 +45,7 @@ while True:
 
     elif opcion == "4":
         print("Lista: ")
-        agenda.mostrar_arrayList()
+        agenda.ListarArrayList()
         
     elif opcion == "5":
         print("Adiós.")

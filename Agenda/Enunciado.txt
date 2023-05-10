@@ -1,0 +1,22 @@
+En esta práctica, se desea implementar una agenda en Python que utilice MongoDB para almacenar los contactos. La agenda debe permitir insertar nuevos contactos, borrar contactos existentes y actualizar la información de los contactos existentes.
+
+Para realizar esta práctica, se deben seguir los siguientes pasos:
+
+Instalar la biblioteca de Python pymongo para conectarnos a la base de datos de MongoDB.
+
+Definir una clase llamada Agenda que tenga métodos para insertar, borrar y actualizar los datos de los contactos. La clase debe tener los siguientes atributos:
+
+cliente: instancia del cliente de MongoDB
+db: objeto de la base de datos de MongoDB
+coleccion: objeto de la colección de MongoDB donde se almacenarán los contactos
+El método insertar_contacto debe permitir insertar un nuevo contacto en la colección de MongoDB. El método debe tomar como argumentos el nombre, apellido, número de teléfono y dirección de correo electrónico del contacto. El método debe generar un ID único para el contacto y agregarlo al documento antes de insertarlo en la colección.
+
+El método borrar_contacto debe permitir borrar un contacto existente de la colección de MongoDB. El método debe tomar como argumento el ID del contacto a borrar.
+
+El método actualizar_contacto debe permitir actualizar la información de un contacto existente en la colección de MongoDB. El método debe tomar como argumentos el ID del contacto a actualizar y los nuevos valores del nombre, apellido, número de teléfono y dirección de correo electrónico.
+
+Escribir un programa de Python que permita interactuar con la agenda y realizar las operaciones de inserción, borrado y actualización de los contactos. El programa debe presentar un menú de opciones al usuario para que pueda seleccionar la operación deseada.
+
+ 
+
+Además, se deben almacenar los contactos en arrays para poder manipularlos en el programa.
