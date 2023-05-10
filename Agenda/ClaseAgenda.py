@@ -2,7 +2,7 @@
 
 class Agenda:
     
-    def init(self, cliente, Agenda, TablaAgenda):
+    def __init__(self, cliente, Agenda, TablaAgenda):
         self.cliente = cliente
         self.db = self.cliente[Agenda]
         self.coleccion = self.db[TablaAgenda]
@@ -13,7 +13,7 @@ class Agenda:
         self.coleccion.insert_one(documento)#BBDD
         self.contactos.append(documento)#ArrayList
 
-    def borrar_contacto(self, nombre):
+    def borrar_contacto(self, nombre):      
        self.coleccion.delete_one({"nombre" : nombre})
        for recorre in self.contactos:
            if recorre["nombre"]==nombre:
@@ -22,10 +22,20 @@ class Agenda:
     def actualizar_contacto (self, nombre, apellido, telefono, email):
         self.coleccion.update_one({"telefono" : telefono},{"$set":{"nombre" : nombre , "apellido" : apellido ,"email" : email}})
         for recorre in self.contactos:
-            if recorre["telefono"]==telefono:
+            if recorre["telefono"]==telefono:#Si el telefono es el mismo que la Aux,
                 recorre["nombre"]=nombre
                 recorre["apellido"]=apellido
                 recorre["email"]=email
+
+    def mostrar_arrayList (self):
+
+        for mostrar in self.contactos:
+            print("Nombre: " + mostrar["nombre"])
+            print("Apellido: " + mostrar["apellido"])
+            print("Telefono: " + mostrar["telefono"])
+            print("Email: " + mostrar["email"])
+
+
 
         
 
