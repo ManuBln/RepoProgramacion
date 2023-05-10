@@ -30,18 +30,26 @@ while True:
 
     elif opcion == "2":
         print("Has seleccionado la opción 2.")
+        nombre = input("Introduzca el nombre del contacto para borrarlo: ")
         agenda.borrar_contacto(nombre) 
         
     elif opcion == "3":
         print("Has seleccionado la opción 3.")
+
+        telefono = input("Introduce el Telefono para identificar el contacto: ")
+
+        nombre = input("Introduce el Nombre: ")
+        apellido = input("Introduce el Apellido: ")
+        email = input("Introduce el Email: ")
         agenda.actualizar_contacto(nombre,apellido,telefono,email)
 
     elif opcion == "4":
-        print("Has seleccionado la opción 4.")
+        print("Lista: ")
         agenda.mostrar_arrayList()
         
     elif opcion == "5":
         print("Adiós.")
         break
+    
     else:
         print("Opción inválida. Inténtalo de nuevo.")
