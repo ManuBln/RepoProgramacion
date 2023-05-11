@@ -9,16 +9,21 @@ agenda = Agenda(cliente,"Agenda","TablaAgenda")
 
 while True:
     
-    print("--------- 1. Insertar Contacto -----------")
-    print("--------- 2. Borrar Contacto -------------")
-    print("--------- 3. Actualizar Contacto ---------")
-    print("--------- 4. Mostrar ---------------------")
-    print("--------- 5. Salir -----------------------")
+    print("********************************************")
+    print("*******************AGENDA*******************")
+    print("********************************************")
+    print("********** 1. Insertar Contacto ************")
+    print("********** 2. Borrar Contacto **************")
+    print("********** 3. Actualizar Contacto **********")
+    print("********** 4. Listar Contacto **************")
+    print("********** 5. Salir ************************")
+    print("********************************************")
     opcion = input("Selecciona una opción: ")
     
 
     if opcion == "1":
         print("Has seleccionado la opción 1.")
+        print("*****************************")
         nombre = input("Introduce el Nombre: ")
         apellido = input("Introduce el Apellido: ")
         telefono = input("Introduce el Telefono: ")
@@ -32,6 +37,7 @@ while True:
         print("Has seleccionado la opción 2.")
         nombre = input("Introduzca el nombre del contacto para borrarlo: ")
         agenda.borrar_contacto(nombre) 
+        print("Contacto eliminado correctamente")
         
     elif opcion == "3":
         print("Has seleccionado la opción 3.")
@@ -42,6 +48,7 @@ while True:
         apellido = input("Introduce el Apellido: ")
         email = input("Introduce el Email: ")
         agenda.actualizar_contacto(nombre,apellido,telefono,email)
+        print("Contacto actualizado correctamente")
 
     elif opcion == "4":
         print("Lista: ")
@@ -52,4 +59,4 @@ while True:
         break
     
     else:
-        print("Opción inválida. Inténtalo de nuevo.")
+        print("Intentelo de nuevo.")
